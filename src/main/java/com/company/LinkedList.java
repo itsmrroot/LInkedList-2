@@ -59,6 +59,13 @@ public class LinkedList {
         return deletedValue;
         }
     }
+    public void displayLinkedList(){
+        Node current=this.head;
+        while(current!=null){
+            System.out.println(current.data);
+            current=current.next;
+        }
+    }
 
 
 
