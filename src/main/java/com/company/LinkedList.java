@@ -81,4 +81,14 @@ public class LinkedList {
         Node node3 = new Node(24);
         node2.next = node3;
     }
+    public int size(){
+        int count = 0;
+
+        Node current=this.head;
+        while(current!=null){
+            count++;
+            current=current.next;
+        }
+        return count;
+    }
 }
