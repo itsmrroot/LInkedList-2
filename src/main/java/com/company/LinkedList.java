@@ -7,18 +7,20 @@ public class LinkedList {
         this.head=null;
     }
 
-    public void append(int data){
+    public void append(Node newNode){
+        Node current=this.head;
 
-        Node newNode=new Node(data);
-        if(head==null){
-            head=newNode;
+        if(current==null){
+            this.head=newNode;
+        }else{
+            while(current.next!=null){
+                current=current.next;
+            }
+            current.next=newNode;
         }
-        while (head.next!=null){
-            head=head.next;
 
-        }
-        head.next=newNode;
     }
+
 
 
 
