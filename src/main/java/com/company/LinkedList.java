@@ -38,6 +38,27 @@ public class LinkedList {
             }
         }
     }
+    public  int delete(int index){
+        Node current = this.head;
+        Node previous = null;
+        int deletedValue = -1;
+
+        if(index==0){
+            deletedValue= this.head.data;
+            this.head=this.head.next;
+            return deletedValue;
+        }else{
+        for(int i = 0 ; i < index  && current !=null; i++){
+            previous=current;
+            current = current.next;
+        }
+        if(current!=null){
+            deletedValue=current.data;
+            previous.next=current.next;
+        }
+        return deletedValue;
+        }
+    }
 
 
 
