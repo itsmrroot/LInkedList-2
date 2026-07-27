@@ -91,4 +91,16 @@ public class LinkedList {
         }
         return count;
     }
+    public int search(int value){
+        Node current=this.head;
+        int index=0;
+        while(current!=null){
+            if(current.data==value){
+                return index;
+            }
+            index++;
+            current=current.next;
+        }
+        return -1;
+    }
 }
