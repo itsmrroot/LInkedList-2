@@ -83,8 +83,8 @@ public class LinkedList {
     }
     public int size(){
         int count = 0;
-
         Node current=this.head;
+
         while(current!=null){
             count++;
             current=current.next;
@@ -94,6 +94,7 @@ public class LinkedList {
     public int search(int value){
         Node current=this.head;
         int index=0;
+
         while(current!=null){
             if(current.data==value){
                 return index;
@@ -102,5 +103,18 @@ public class LinkedList {
             current=current.next;
         }
         return -1;
+    }
+    public void reverse() {
+        Node previous = null;
+        Node current = this.head;
+
+        while (current != null) {
+            Node next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        this.head = previous;
     }
 }
