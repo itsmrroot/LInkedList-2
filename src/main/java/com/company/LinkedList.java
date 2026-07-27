@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class LinkedList {
     Node head;
 
@@ -68,7 +70,15 @@ public class LinkedList {
     }
 
 
+    public void createLinkedList() {
 
+        Node node1 = new Node(11);
+        this.head = node1;
 
+        Node node2 = new Node(18);
+        node1.next = node2;
 
+        Node node3 = new Node(24);
+        node2.next = node3;
+    }
 }
